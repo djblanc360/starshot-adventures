@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Vite build output (already inside Shopify's assets folder)
+assets/*.js
+assets/*.css
+assets/*.map
+
+# Tailwind generated CSS file
+assets/*.css
+
+# Shopify CLI .env file (if used for environment variables)
+.env
+
+# Local Shopify theme files
+dist/
+.settings/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Ignore Shopify .git directory in case of theme syncs
+/.git/
+
+# Lock files (if using yarn, you can remove the package-lock.json entry and add yarn.lock)
+package-lock.json
+
+# Vite specific output (if any)
+.vite/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
