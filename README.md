@@ -49,3 +49,10 @@ This a skeleton Shopify theme using **TypeScript**, **Tailwind CSS**, and **Vite
 ```bash
 npm install
 ```
+
+### Bundling
+
+All TypeScript files will be created in the `src/` directory and then imported into the `src/main.ts` file.
+
+All CSS files will will be created in the `src/` directory and then imported into the `src/main.css` file.
+
