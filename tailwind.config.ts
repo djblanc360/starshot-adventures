@@ -7,7 +7,15 @@ export default {
     '!./node_modules/**/*'      // Exclude node_modules
   ],
   theme: {
-    extend: {},                 // You can extend the theme here if needed
+    extend: {
+      colors: {
+        'shopify-dark-green': '#64943e',
+        'shopify-light-green': '#95bf47',
+      },
+    },
+    backgroundImage: {
+      'gradient-dark': 'linear-gradient(to bottom, #1a1a1a, #372F2F, #002850)',
+    },
   },
-  plugins: [],                  // Add Tailwind plugins here if required
+  plugins: [],
 } satisfies Config;
