@@ -2,12 +2,12 @@
 node_modules/
 
 # Vite build output (already inside Shopify's assets folder)
-assets/*.js
-assets/*.css
-assets/*.map
+# assets/*.js
+# assets/*.css
+# assets/*.map
 
 # Tailwind generated CSS file
-assets/*.css
+# assets/*.css
 
 # Shopify CLI .env file (if used for environment variables)
 .env
@@ -39,3 +39,5 @@ Thumbs.db
 
 # Environment Variables
 .env
+
+.shopify
