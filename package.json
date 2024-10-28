@@ -10,6 +10,7 @@
     "vite:build": "vite build",
     "vite:watch": "vite build --watch",
     "shopify:serve": "shopify theme dev --live-reload hot-reload",
+    "tsc": "npx tsc",
     "deploy": "npm run build && shopify theme push"
   },
   "keywords": [],
