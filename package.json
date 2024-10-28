@@ -9,7 +9,7 @@
     "build": "npm-run-all vite:build tsc",
     "vite:build": "vite build",
     "vite:watch": "vite build --watch",
-    "shopify:serve": "shopify theme dev --legacy",
+    "shopify:serve": "shopify theme dev --live-reload hot-reload",
     "deploy": "npm run build && shopify theme push"
   },
   "keywords": [],
