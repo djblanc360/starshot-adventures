@@ -36,7 +36,8 @@ menu .menu-item.active {
   display: block;
 } */
 
-mega-menu a::after {
+mega-menu header nav a::after,
+mega-menu menu a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -50,6 +51,7 @@ mega-menu a::after {
   pointer-events: none;
 }
 
-mega-menu a:hover::after {
+mega-menu header nav a:hover::after,
+mega-menu menu a:hover::after {
   transform: scaleX(1);
 }
