@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "npm-run-all --parallel vite:watch shopify:serve",
-    "pull": "shopify theme pull --env development --only templates/ --only config/settings_data.json",
+    "pull": "shopify theme pull --only templates/ --only config/settings_data.json",
     "build": "npm-run-all vite:build tsc",
     "vite:build": "vite build",
     "vite:watch": "vite build --watch",
-    "shopify:serve": "shopify theme dev --env development --legacy",
-    "deploy": "npm run build && shopify theme push --env development"
+    "shopify:serve": "shopify theme dev --legacy",
+    "deploy": "npm run build && shopify theme push"
   },
   "keywords": [],
   "author": "",

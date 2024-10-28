@@ -1,4 +1,4 @@
 # set the store and theme_id to automatically deploy to
-development:
-  store: the-store-name.myshopify.com
-  theme_id: "12345"
+# development:
+#   store: the-store-name.myshopify.com
+#   theme_id: "12345"
