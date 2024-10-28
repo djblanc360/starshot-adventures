@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "npm-run-all --parallel vite:watch shopify:serve",
     "pull": "shopify theme pull --only templates/ --only config/settings_data.json",
-    "build": "vite build",
+    "build": "npm-run-all vite:build tsc",
+    "vite:build": "vite build",
     "vite:watch": "vite build --watch",
-    "shopify:serve": "shopify theme dev --legacy"
+    "shopify:serve": "shopify theme dev --legacy",
+    "deploy": "npm run build && shopify theme push"
   },
   "keywords": [],
   "author": "",
