@@ -1,12 +1,6 @@
 <section>
-    <div class="container">
-        <div class="row">
-        <div class="col-12">
-            <h1>Quiz</h1>
-            <p>Take our quiz to find out which product is right for you.</p>
-            <a href="/pages/quiz" class="btn btn-primary">Take the quiz</a>
-        </div>
-        </div>
+    <div class="flex">
+        {%-  render 'quiz-slide', settings: section.settings -%}
     </div>
 </section>
 
@@ -14,10 +8,11 @@
 {
   "name": "Quiz",
   "settings": [],
-  "presets": [
+  "blocks": [
     {
-      "category": "store-features",
-      "name": "Quiz"
+        "type": "quiz-slide",
+        "name": "Quiz Slide",
+        "settings": []
     }
   ]
 }

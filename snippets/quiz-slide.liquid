@@ -1,0 +1,27 @@
+<div class="quiz-slide flex flex-col items-center p-4 space-y-4 border rounded-md shadow-md">
+    <div class="flex flex-col items-center justify-center space-y-2 text-center">
+        <h2 class="text-2xl font-semibold">First Question</h2>
+        <p class="text-sm text-gray-600">Choose an option that best fits:</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4">
+        <div class="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center">
+            <button class="quiz-btn w-full py-3 px-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600" type="button" onclick="goTo(this, 3)" name="period" value="regular" data-clicked="add">
+                <span class="block w-10 h-10 mb-2">
+                    <!-- SVG or image placeholder -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129.1 48.58" class="w-full h-full text-gray-700 fill-current">
+                        <!-- SVG content here -->
+                    </svg>
+                </span>
+                <h3 class="font-medium">Answer 1</h3>
+                <p class="text-xs text-gray-500">More explanation</p>
+            </button>
+        </div>
+        <!-- Repeat similar blocks for other answers, adjusting values as needed -->
+    </div>
+    <div class="flex flex-col items-center space-y-2 w-full mt-4">
+        <div class="text-gray-500 text-sm">1 of 9</div>
+        <div class="w-full bg-gray-300 rounded-full h-1.5">
+            <div class="bg-blue-500 h-1.5 rounded-full" style="width: 22%;"></div>
+        </div>
+    </div>
+</div>
