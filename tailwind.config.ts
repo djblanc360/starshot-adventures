@@ -11,6 +11,7 @@ export default {
       colors: {
         'shopify-dark-green': '#64943e',
         'shopify-light-green': '#95bf47',
+        'biome-dark-blue': '#0d5070',
       },
     },
     backgroundImage: {

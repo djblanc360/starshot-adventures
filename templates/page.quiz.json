@@ -1,14 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "header": {
-        "type": "header"
+      "type": "header",
+      "settings": {
+      }
     },
     "quiz": {
-        "type": "quiz"
+      "type": "quiz",
+      "settings": {
+        "start_image": "shopify://shop_images/quiz_start.png",
+        "start_title": "All roads lead to the gut",
+        "start_description": "<p>Welcome! We are Bio.me, a science-led, human-centered health company focused on guiding you towards better but health. Together, let's figure out which supplements are the right choice for you on your journey.</p>",
+        "cta_text": "Take Quiz",
+        "final_title": "",
+        "final_description": ""
+      }
     }
   },
   "order": [
     "header",
-    "quiz",
+    "quiz"
   ]
 }

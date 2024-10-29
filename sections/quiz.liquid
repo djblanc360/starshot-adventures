@@ -1,13 +1,93 @@
-<section>
-    <div class="flex">
-        {%-  render 'quiz-slide', settings: section.settings -%}
-    </div>
+{% assign quiz_slides = shop.metaobjects.quiz_slide %}
+<product-quiz>
+<section class="quiz-container">
+  <!-- Start Slide -->
+  <div class="quiz-slide beginning-slide flex flex-col items-center p-4 space-y-4 border rounded-md shadow-md">
+      <div class="flex w-full space-x-4 bg-biome-dark-blue h-full">
+          <!-- Left Div -->
+          <div
+              class="w-full h-full bg-cover bg-center rounded-md"
+              style="
+                  {% if section.settings.start_image %}
+                  background-image: url({{ section.settings.start_image | img_url: 'master' }});
+                  {% endif %}
+              "
+          >
+            <img src="{{ section.settings.start_image | img_url: 'master' }}" alt="Quiz Image" class="w-full h-full object-cover" width="100%" height="100%">
+          </div>
+
+          <!-- Right Div -->
+          <div class="w-1/2 flex flex-col justify-center">
+              <h2 class="text-3xl font-semibold text-white">{{ section.settings.start_title }}</h2>
+              <h2 class="text-white">test specific metaobject value: {{ shop.metaobjects.quiz_answer_option.specific.title }}</h2>
+              <div class="text-center text-white mb-4">{{ section.settings.start_description }}</div>
+              <button class="cta-btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" next>
+                  {{ section.settings.cta_text }}
+              </button>
+          </div>
+      </div>
+  </div>
+
+
+  <!-- Quiz Slides -->
+  {% for slide in quiz_slides %}
+      <div class="quiz-slide">
+        <h1>{{  slide.question_text }}</h1>
+          {%- render 'quiz-slide', settings: section.settings, slide: slide -%}
+      </div>
+  {% endfor %}
+
+  <!-- Final Slide -->
+  <div class="quiz-slide final-slide flex flex-col items-center p-4 space-y-4 border rounded-md shadow-md hidden">
+      <h2 class="text-3xl font-semibold">{{ section.settings.final_title }}</h2>
+      <div class="text-center text-gray-700">{{ section.settings.final_description }}</div>
+  </div>
 </section>
+</product-quiz>
 
 {% schema %}
 {
   "name": "Quiz",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Starting Slide"
+    },
+    {
+      "type": "image_picker",
+      "id": "start_image",
+      "label": "Image of starting slide",
+    },
+    {
+      "type": "text",
+      "id": "start_title",
+      "label": "Title of starting slide",
+    },
+    {
+      "type": "richtext",
+      "id": "start_description",
+      "label": "Description of starting slide",
+    },
+    {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+    },
+    {
+      "type": "header",
+      "content": "Final Slide"
+    },
+    {
+      "type": "text",
+      "id": "final_title",
+      "label": "Title of final slide",
+    },
+    {
+      "type": "richtext",
+      "id": "final_description",
+      "label": "Description of final slide",
+    },
+  ],
   "blocks": [
     {
         "type": "quiz-slide",
