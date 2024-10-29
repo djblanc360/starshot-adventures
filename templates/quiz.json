@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "header": {
+        "type": "header"
+    },
+    "quiz": {
+        "type": "quiz"
+    }
+  },
+  "order": [
+    "header",
+    "quiz",
+  ]
+}
